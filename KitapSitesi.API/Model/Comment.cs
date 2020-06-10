@@ -13,5 +13,10 @@ namespace KitapSitesi.API.Model
         public int CommentTo { get; set; }
         public string Description { get; set; }
 
+        public User User { get; set; }
+        public Book Book { get; set; }
+
+
+
     }
 }

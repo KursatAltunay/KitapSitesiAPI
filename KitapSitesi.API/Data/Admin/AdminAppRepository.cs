@@ -46,10 +46,8 @@ namespace KitapSitesi.API.Data
 
         public List<Book> GetBooks()
         {
-            var books = _context.Books.Include(d => d.BookCategories)/*.Include(a => a.Categories).Include(b => b.Authors).Include(c => c.BookAuthors)*/.ToList();
-
-            var categories = _context.Categories.ToList();
-            
+            var books = _context.Books.Include(d => d.BookCategories).Include(c => c.BookAuthors)/*.Include(a => a.Categories).Include(b => b.Authors)*/.ToList();
+                        
             return books;
         }
 

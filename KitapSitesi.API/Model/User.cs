@@ -7,6 +7,11 @@ namespace KitapSitesi.API.Model
 {
     public class User
     {
+        public User()
+        {
+            Comments = new List<Comment>();
+            OrderDetails = new List<OrderDetail>();
+        }
         public int Id { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
@@ -16,6 +21,9 @@ namespace KitapSitesi.API.Model
         public byte[] PasswordSalt { get; set; }
         public string Address { get; set; }
         public int Phone { get; set; }
+
+        public List<Comment> Comments { get; set; }
+        public List<OrderDetail> OrderDetails { get; set; }
 
     }
 }

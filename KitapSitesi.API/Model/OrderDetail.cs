@@ -13,6 +13,8 @@ namespace KitapSitesi.API.Model
         public DateTime OrderDate { get; set; }
         public int Count { get; set; }
         public decimal Price { get; set; }
+        public User User { get; set; }
+        public Book Book { get; set; }
 
     }
 }
